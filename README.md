@@ -1,3 +1,7 @@
+uv pip install  nltk  -i https://pypi.tuna.tsinghua.edu.cn/simple
+uv venv -p python3.9 pytorch-tutorial
+source my_venv/bin/activate
+uv pip install -e .
 <p align="center"><img width="40%" src="logo/pytorch_logo_2018.svg" /></p>
 
 --------------------------------------------------------------------------------
