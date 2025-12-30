@@ -7,7 +7,9 @@ authors = [
     { name = "lihanghang", email = "lihanghang@guazi.com" }  # 对象格式，符合新版规范
 ]
 dependencies = [
+    "matplotlib>=3.9.4",
     "pandas>=2.3.3",
+    "tensordict>=0.10.0",
 ]
 
 [tool.poetry.dependencies]
@@ -36,7 +38,11 @@ argparse = "1.4.0"                    # 命令行参数解析库，用于处理�
 pandas = "2.3.3"
 pytz = "2025.2"
 tzdata = "2025.3"
-
+tensordict = "0.10.0"
+cloudpickle = "3.1.2"
+importlib-metadata = "8.7.1"
+pyvers = "0.1.0"
+pillow = "11.3.0"
 [[tool.poetry.source]]
 name = "aliyun"
 url = "https://mirrors.aliyun.com/pypi/simple/"
