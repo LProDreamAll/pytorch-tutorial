@@ -45,7 +45,6 @@ importlib-metadata = "8.7.1"
 pyvers = "0.1.0"
 pillow = "11.3.0"
 setuptools = "80.9.0"
-
 [[tool.poetry.source]]
 name = "aliyun"
 url = "https://mirrors.huaweicloud.com/repository/pypi/simple/"
