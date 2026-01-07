@@ -1,6 +1,5 @@
 import torch
 
-
 # def foo(x, y):
 #     a = torch.sin(x)
 #     b = torch.cos(y)
@@ -164,7 +163,6 @@ def bar(a, b):
 """“图中断”这一术语源于torch.compile尝试捕获并优化PyTorch操作图这一事实。当遇到不支持的Python代码时，这个图就必须被“中断”。
 图中断会导致优化机会的损失，这可能仍然不尽如人意，但总比出现无声的错误或硬崩溃要好。"""
 
-from functorch.experimental.control_flow import cond
 
 
 @torch.compile(fullgraph=True)
@@ -178,7 +176,7 @@ def bar_fixed(a, b):
         # NOTE: torch.cond doesn't allow aliased outputs
         return y.clone()
 
-    x = cond(b.sum() < 0, true_branch, false_branch, (b,))
+    x = torch.cond(b.sum() < 0, true_branch, false_branch, (b,))
     return x * b
 
 
